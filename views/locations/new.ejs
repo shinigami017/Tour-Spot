@@ -1,0 +1,29 @@
+<%- include ("../partials/nav-top") %>
+
+    <section>
+        <div class="form-container">
+            <div class="form-box">
+                <div class="form-title">
+                    <h1>Add New Location</h1>
+                </div>
+                <%- include ("../partials/messages") %>
+                    <form action="/locations" method="POST">
+                        <div class="field">
+                            <input type="text" name="title" placeholder="Enter location name" value="<%= typeof title != 'undefined' ? title : '' %>" required>
+                        </div>
+                        <div class="field">
+                            <input type="url" name="image" placeholder="Enter image url" required>
+                        </div>
+                        <div class="field desc-field">
+                            <textarea required name="desc" placeholder="Enter description"><%= typeof description != 'undefined' ? description : '' %></textarea>
+                        </div>
+                        <div class="field field-btn">
+                            <a class="field-btn" href="/locations">Cancel</a>
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </section>
+
+    <%- include ("../partials/bottom") %>

@@ -1,0 +1,134 @@
+/* SECTION */
+
+.banner {
+    width: 85%;
+    margin: 0 auto;
+    background-color: rgba(109, 109, 109, 0.178);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.banner .banner-title {
+    text-align: center;
+    padding: 10px;
+    font-size: 40px;
+    letter-spacing: 3px;
+    border-bottom: 3px ridge darkgray;
+}
+
+.banner-info {
+    /* background-color: red; */
+    font-size: 20px;
+    padding: 10px 20px;
+    line-height: 30px;
+    color: rgb(29, 32, 34);
+}
+
+.banner .banner-btn {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+    padding-bottom: 20px;
+}
+
+.banner-btn a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    background-color: blue;
+    border-radius: 5px;
+}
+
+.banner-btn a:hover {
+    background-color: rgba(0, 0, 255, 0.678);
+}
+
+.cards-container {
+    width: 80%;
+    margin: 50px auto;
+}
+
+
+/* Card */
+
+.card-item {
+    background-color: #fff;
+    vertical-align: top;
+    width: 25%;
+    display: inline-block;
+    box-shadow: 2px 2px 10px black;
+    border-radius: 5px;
+    margin: 4%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.card-image img {
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.card-title {
+    text-align: center;
+    padding: 10px;
+    font-size: 19px;
+}
+
+.card-title a {
+    text-decoration: none;
+    color: #20232A;
+}
+
+.card-title a:hover {
+    color: rgba(0, 43, 143, 0.829);
+}
+
+.card-des p {
+    padding: 5px 15px;
+}
+
+.card-des {
+    padding-bottom: 5px;
+    text-align: center;
+    font-size: 16px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    line-height: 22px;
+    color: #20232A;
+}
+
+.card-btn {
+    text-align: center;
+    padding: 20px;
+}
+
+.card-btn a {
+    text-decoration: none;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    background-color: white;
+    color: #20232A;
+    border: 1px solid #20232A;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.card-btn a:hover {
+    background-color: #20232A;
+    color: white;
+    transition: .5s;
+    cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    .card-item {
+        width: 40%;
+        margin: 4%;
+    }
+}
+
+@media (max-width: 700px) {
+    .card-item {
+        width: 100%;
+        margin: 0;
+    }
+}

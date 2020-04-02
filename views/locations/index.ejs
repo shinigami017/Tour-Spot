@@ -1,0 +1,41 @@
+<%- include ("../partials/nav-top") %>
+
+    <section>
+        <div class="banner">
+            <div class="banner-title">TourSpot</div>
+            <div class="banner-info">
+                Need a break? Pack your bags. We're going on vacation. Here are some best locations you can visit for you next trip.
+            </div>
+            <div class="banner-btn"><a href="/locations/new">Add new location</a></div>
+        </div>
+
+        <div class="cards-container">
+
+            <% locations.forEach(function(location){ %>
+                <div class="card-item">
+                    <div class="card-image">
+                        <img src="<%= location.images[0] %>" alt="<%= location.title %>">
+                    </div>
+                    <div class="card-title">
+                        <h1>
+                            <a href="#">
+                                <%= location.title %>
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="card-des">
+                        <p>
+                            <% //let index = location.description.indexOf(" ",location.description.length/3);
+                            let index = location.description.indexOf(" ",150); %>
+                                <%= location.description.substring(0,index)+"..." %>
+                        </p>
+                        <div class="card-btn"><a href="/locations/<%= location._id %>">Read More...</a></div>
+                    </div>
+                </div>
+                <%});%>
+
+        </div>
+
+    </section>
+
+    <%- include ("../partials/bottom") %>

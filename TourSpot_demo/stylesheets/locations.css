@@ -1,0 +1,306 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    flex: 90%;
+    background-color: white;
+    height: 100vh;
+}
+
+section {
+    background: #f8f8f8;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #E9E4F0, rgb(216, 212, 224));
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #F8F8F8, rgb(216, 212, 224));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+/* NAVBAR */
+
+nav {
+    /* background-color: white; */
+    padding: 15px 5%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container .nav-menu {
+    list-style: none;
+    display: flex;
+}
+
+.nav-container .nav-menu li {
+    margin-left: 50px;
+}
+
+.nav-container .logo {
+    font-size: 35px;
+    font-family: 'Gill Sans MT', Cochin, Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 550;
+    letter-spacing: 2px;
+}
+
+.nav-container .logo a {
+    text-decoration: none;
+    color: #20232A;
+}
+
+.nav-container .nav-menu li a {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 450;
+}
+
+.nav-container .nav-menu li a:hover {
+    background-color: #20232A;
+    color: white;
+}
+
+#navBtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    border: none;
+    outline: none;
+    background-color: #20232A;
+    padding: 0 15px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.line {
+    height: 3px;
+    width: 27.5px;
+    margin: 5px 0;
+    background-color: white;
+}
+
+@media (max-width: 700px) {
+    .nav-container,
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+    nav {
+        padding: 0;
+    }
+    .nav-menu {
+        pointer-events: none;
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: all 0.4s ease;
+    }
+    .nav-container .logo {
+        line-height: 50px;
+        text-align: center;
+        width: 100%;
+        font-size: 28px;
+        padding: 10px 0;
+        border-bottom: 2px ridge #000;
+        margin-bottom: 5px;
+    }
+    .nav-container .nav-menu li {
+        margin-left: 0;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .nav-container .nav-menu li a {
+        border-radius: 15px;
+        font-size: 18px;
+    }
+    #navBtn {
+        display: block;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.toggle-menu {
+    pointer-events: all;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+/* SECTION */
+
+.banner {
+    width: 85%;
+    margin: 0 auto;
+    background-color: rgba(109, 109, 109, 0.178);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.banner .banner-title {
+    text-align: center;
+    padding: 10px;
+    font-size: 40px;
+    letter-spacing: 3px;
+    border-bottom: 3px ridge darkgray;
+}
+
+.banner-info {
+    /* background-color: red; */
+    font-size: 20px;
+    padding: 10px 20px;
+    line-height: 30px;
+    color: rgb(29, 32, 34);
+}
+
+.banner .banner-btn {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+    padding-bottom: 20px;
+}
+
+.banner-btn a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    background-color: blue;
+    border-radius: 5px;
+}
+
+.banner-btn a:hover {
+    background-color: rgba(0, 0, 255, 0.678);
+}
+
+.cards-container {
+    width: 80%;
+    margin: 50px auto;
+}
+
+
+/* Card */
+
+.card-item {
+    background-color: #fff;
+    vertical-align: top;
+    width: 25%;
+    display: inline-block;
+    box-shadow: 2px 2px 10px black;
+    border-radius: 5px;
+    margin: 4%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.card-image img {
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.card-title {
+    text-align: center;
+    padding: 10px;
+    font-size: 19px;
+}
+
+.card-title a {
+    text-decoration: none;
+    color: #20232A;
+}
+
+.card-title a:hover {
+    color: rgba(0, 43, 143, 0.829);
+}
+
+.card-des p {
+    padding: 5px 15px;
+}
+
+.card-des {
+    padding-bottom: 5px;
+    text-align: center;
+    font-size: 16px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    line-height: 22px;
+    color: #20232A;
+}
+
+.card-btn {
+    text-align: center;
+    padding: 20px;
+}
+
+.card-btn a {
+    text-decoration: none;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    background-color: white;
+    color: #20232A;
+    border: 1px solid #20232A;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.card-btn a:hover {
+    background-color: #20232A;
+    color: white;
+    transition: .5s;
+    cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    .card-item {
+        width: 40%;
+        margin: 4%;
+    }
+}
+
+@media (max-width: 700px) {
+    .card-item {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+
+/* FOOTER */
+
+footer {
+    flex: 10%;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    background-color: #20232A;
+    /* height: 10vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4vh 0;
+}
+
+footer p a {
+    text-decoration: none;
+    font-weight: 100;
+    color: rgb(37, 37, 150);
+}
+
+footer p a:hover {
+    color: blue;
+}

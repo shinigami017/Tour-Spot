@@ -1,0 +1,32 @@
+<%- include ("../partials/top") %>
+
+    <div class="form-container">
+        <div class="form-box">
+            <div class="form-title">
+                <h1>Sign Up</h1>
+            </div>
+            <%- include ("../partials/messages") %>
+                <form action="/users/register" method="POST">
+                    <div class="field">
+                        <input type="text" name="username" placeholder="Enter username" value="<%= typeof username != 'undefined' ? username : '' %>">
+                    </div>
+                    <div class="field">
+                        <input type="email" name="email" placeholder="Enter email" value="<%= typeof email != 'undefined' ? email : '' %>">
+                    </div>
+                    <div class="field">
+                        <input type="password" name="password" id="password1" placeholder="Enter password" value="<%= typeof password != 'undefined' ? password : '' %>">
+                        <div class="toggle" data-list="1"></div>
+                    </div>
+                    <div class="field">
+                        <input type="password" name="password2" id="password2" placeholder="Confirm password" value="<%= typeof password2 != 'undefined' ? password2 : '' %>">
+                        <div class="toggle" data-list="2"></div>
+                    </div>
+                    <div class="field"><input type="submit" value="Sign Up"></div>
+                </form>
+                <div class="form-suggest">
+                    <p>Already a member? <a href="/users/login">Log in here</a></p>
+                </div>
+        </div>
+    </div>
+
+    <%- include ("../partials/bottom") %>

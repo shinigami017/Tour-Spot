@@ -1,0 +1,25 @@
+<%- include ("../partials/top") %>
+
+    <div class="form-container">
+        <div class="form-box">
+            <div class="form-title">
+                <h1>Login</h1>
+            </div>
+            <%- include ("../partials/messages") %>
+                <form action="/users/login" method="POST">
+                    <div class="field">
+                        <input type="text" name="username" placeholder="Enter username">
+                    </div>
+                    <div class="field">
+                        <input type="password" name="password" id="password1" placeholder="Enter password">
+                        <div class="toggle" data-list="1"></div>
+                    </div>
+                    <div class="field"><input type="submit" value="Sign In"></div>
+                </form>
+                <div class="form-suggest">
+                    <p>Not a member? <a href="/users/register">Sign up now</a></p>
+                </div>
+        </div>
+    </div>
+
+    <%- include ("../partials/bottom") %>
