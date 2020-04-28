@@ -100,12 +100,6 @@ nav {
     background-color: white;
 }
 
-.toggle-menu {
-    pointer-events: all;
-    opacity: 1;
-    transform: translateY(0px);
-}
-
 
 /* SECTION */
 
@@ -308,7 +302,7 @@ footer {
 footer p a {
     text-decoration: none;
     font-weight: 100;
-    color: rgb(37, 37, 150);
+    color: rgb(66, 66, 247);
 }
 
 footer p a:hover {
@@ -359,8 +353,11 @@ footer p a:hover {
     footer {
         flex-direction: column;
         text-align: center;
-        font-size: 17px;
+        font-size: 15px;
         padding: 2vh 0;
+    }
+    footer p a {
+        font-size: 16px;
     }
 }
 
@@ -390,7 +387,7 @@ footer p a:hover {
 
 @media screen and (max-width: 575px) {
     .carousel-item img {
-        height: 381px;
+        height: 350px;
         width: 576px;
     }
     .carousel-control-prev-icon,

@@ -14,6 +14,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    min-width: 100%;
     background: #abbaab;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #ffffff, #abbaab);
@@ -109,4 +110,32 @@
 
 .form-suggest a:hover {
     color: rgb(39, 39, 240);
+}
+
+@media (max-width: 700px) {
+    .form-container {
+        background: #fff;
+    }
+    .form-box {
+        padding: 15px;
+    }
+    .form-title {
+        font-size: 20px;
+    }
+    .field {
+        width: 250px;
+        height: 45px;
+    }
+    .field input {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+    .field input[type="submit"] {
+        font-size: 18px;
+    }
+    .toggle {
+        right: 15px;
+        width: 25px;
+        height: 25px;
+    }
 }

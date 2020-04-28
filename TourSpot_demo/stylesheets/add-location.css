@@ -86,54 +86,6 @@ nav {
     background-color: white;
 }
 
-@media (max-width: 700px) {
-    .nav-container,
-    .nav-menu {
-        flex-direction: column;
-        width: 100%;
-    }
-    nav {
-        padding: 0;
-    }
-    .nav-menu {
-        pointer-events: none;
-        opacity: 0;
-        transform: translateY(-50px);
-        transition: all 0.4s ease;
-    }
-    .nav-container .logo {
-        line-height: 50px;
-        text-align: center;
-        width: 100%;
-        font-size: 28px;
-        padding: 10px 0;
-        border-bottom: 2px ridge #000;
-        margin-bottom: 5px;
-    }
-    .nav-container .nav-menu li {
-        margin-left: 0;
-        text-align: center;
-        padding: 10px 0;
-    }
-    .nav-container .nav-menu li a {
-        border-radius: 15px;
-        font-size: 18px;
-    }
-    #navBtn {
-        display: block;
-    }
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-.toggle-menu {
-    pointer-events: all;
-    opacity: 1;
-    transform: translateY(0px);
-}
-
 
 /* SECTION */
 
@@ -142,6 +94,7 @@ nav {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    min-width: 100%;
     background: #abbaab;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #ffffff, #abbaab);
@@ -238,6 +191,33 @@ nav {
     color: #ccc;
 }
 
+@media (max-width: 700px) {
+    .form-container {
+        background: #fff;
+    }
+    .form-box {
+        padding: 15px;
+    }
+    .form-title {
+        font-size: 20px;
+    }
+    .field {
+        width: 250px;
+        height: 45px;
+    }
+    .field input {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+    .field input[type="submit"],
+    .field-btn a {
+        font-size: 18px;
+    }
+    .desc-field {
+        height: 150px;
+    }
+}
+
 
 /* FOOTER */
 
@@ -257,9 +237,61 @@ footer {
 footer p a {
     text-decoration: none;
     font-weight: 100;
-    color: rgb(37, 37, 150);
+    color: rgb(66, 66, 247);
 }
 
 footer p a:hover {
     color: blue;
+}
+
+@media (max-width: 700px) {
+    .nav-container,
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+    }
+    nav {
+        padding: 0;
+    }
+    .nav-menu {
+        pointer-events: none;
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: all 0.4s ease;
+    }
+    .nav-container .logo {
+        line-height: 50px;
+        text-align: center;
+        width: 100%;
+        font-size: 28px;
+        padding: 10px 0;
+        border-bottom: 2px ridge #000;
+        margin-bottom: 5px;
+    }
+    .nav-container .nav-menu li {
+        margin-left: 0;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .nav-container .nav-menu li a {
+        border-radius: 15px;
+        font-size: 18px;
+    }
+    #navBtn {
+        display: block;
+    }
+    .toggle-menu {
+        pointer-events: all;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+        font-size: 15px;
+        padding: 2vh 0;
+    }
+    footer p a {
+        font-size: 16px;
+    }
 }

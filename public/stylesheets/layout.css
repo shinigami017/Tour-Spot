@@ -100,10 +100,30 @@ nav {
     background-color: white;
 }
 
-.toggle-menu {
-    pointer-events: all;
-    opacity: 1;
-    transform: translateY(0px);
+
+/* FOOTER */
+
+footer {
+    flex: 10%;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    background-color: #20232A;
+    /* height: 10vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4vh 0;
+}
+
+footer p a {
+    text-decoration: none;
+    font-weight: 100;
+    color: rgb(66, 66, 247);
+}
+
+footer p a:hover {
+    color: blue;
 }
 
 @media (max-width: 700px) {
@@ -150,33 +170,10 @@ nav {
     footer {
         flex-direction: column;
         text-align: center;
-        font-size: 17px;
+        font-size: 15px;
         padding: 2vh 0;
     }
-}
-
-
-/* FOOTER */
-
-footer {
-    flex: 10%;
-    font-size: 20px;
-    color: #fff;
-    letter-spacing: 1px;
-    background-color: #20232A;
-    /* height: 10vh; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4vh 0;
-}
-
-footer p a {
-    text-decoration: none;
-    font-weight: 100;
-    color: rgb(37, 37, 150);
-}
-
-footer p a:hover {
-    color: blue;
+    footer p a {
+        font-size: 16px;
+    }
 }
