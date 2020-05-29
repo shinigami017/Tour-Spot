@@ -30,16 +30,17 @@ app.use(express.static(__dirname + "/public"));
 
 // Connect to MongoDB
 const Connection_URI = process.env.MONGODB_URI || "mongodb+srv://shinigami017:Act@02032517@shinigami017-azees.mongodb.net/TourSpotApplication?retryWrites=true&w=majority";
-mongoose.Promise = global.Promise;
-mongoose.set("debug", true);
+// mongoose.Promise = global.Promise;
+// mongoose.set("debug", true);
 // mongoose.connect("mongodb://localhost/TourSpot", { useNewUrlParser: true, useUnifiedTopology: true });
-mongoose.connect(Connection_URI, {
-    newMongoClient: true,
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => {
-    console.log("Connected to MongoDB");
-}).catch(error => console.log(error));
+mongoose.connect(Connection_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connect(Connection_URI, {
+//     newMongoClient: true,
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true
+// }).then(() => {
+//     console.log("Connected to MongoDB");
+// }).catch(error => console.log(error));
 
 // Express Session Middleware
 app.use(session({
