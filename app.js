@@ -4,6 +4,18 @@ var express = require("express"),
     passport = require("passport"),
     mongoose = require("mongoose");
 
+
+
+
+// const MongoClient = require('mongodb').MongoClient;
+// const uri = "mongodb+srv://shinigami017:<password>@shinigami017-azees.mongodb.net/TourSpotApplication?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true });
+// client.connect(err => {
+//     const collection = client.db("TourSpotApplication").collection("devices");
+//     client.close();
+// });
+
+
 // Init App
 var app = express();
 
@@ -17,7 +29,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
 
 // Connect to MongoDB
-mongoose.connect("mongodb://localhost/TourSpot", { useNewUrlParser: true, useUnifiedTopology: true });
+const Connection_URI = process.env.MONGODB_URI || "mongodb+srv://shinigami017:Act@02032517@shinigami017-azees.mongodb.net/TourSpotApplication?retryWrites=true&w=majority";
+mongoose.Promise = global.Promise;
+mongoose.set("debug", true);
+// mongoose.connect("mongodb://localhost/TourSpot", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(Connection_URI, {
+    newMongoClient: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(() => {
+    console.log("Connected to MongoDB");
+}).catch(error => console.log(error));
 
 // Express Session Middleware
 app.use(session({
@@ -59,6 +81,6 @@ app.use("/locations/:id/comments", commentRoutes);
 app.set("port", (process.env.PORT || 3000));
 app.listen(app.get("port"), function() {
     console.log("Server started on port " + app.get("port") + "!");
+    console.log("Browse http://localhost:" + app.get("port") + "/");
     console.log("Press Ctrl + C to stop the server.");
-    console.log("\n--------------------------------------------------\n");
 });
